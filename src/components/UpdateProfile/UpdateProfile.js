@@ -71,9 +71,9 @@ const UpdateProfile = () => {
 
 
     return (
-        <div className='mx-auto w-50 mt-5 update-profile-container'>
+        <div className='mx-auto mt-5 update-profile-container'>
             <h4 style={{ color: "goldenrod" }} className='mt-3 text-center'>Update Profile</h4>
-            <Form className='mb-4 mt-3' onSubmit={handleSubmit}>
+            <Form className='mb-4 mt-3 update-from-div' onSubmit={handleSubmit}>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>

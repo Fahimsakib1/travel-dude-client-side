@@ -117,12 +117,12 @@ const Login = () => {
 
     return (
         <div>
-            <div className='mx-auto my-5 container login-container w-50'>
+            <div className='mx-auto my-5 container login-container'>
                 <h4 style={{ color: "goldenrod" }} className='mt-3 text-center'>Please Login</h4>
 
                 <form
                     onSubmit={handleLogin}
-                    className='login-form-container px-3'>
+                    className='login-form-container'>
 
                     <div className="">
                         <label htmlFor="formGroupExampleInput" className="form-label">Email</label>
@@ -175,7 +175,7 @@ const Login = () => {
                     </div>
                 </div>
 
-                <div className='google-github-facebook-button-container text-center mt-3'>
+                {/* <div className='google-github-facebook-button-container text-center mt-3'>
                     <div className='google-button-container rounded-4 mb-3'>
                         <button onClick={handleGoogleSignIn} className='google-button border border-0 btn btn-primary-google w-75'>Google Sign in <Link className='m-1 ms-3' title="Google" target="_blank" role="button"><FaGoogle className='fs-4 google-icon-form'></FaGoogle></Link>
                         </button>
@@ -186,7 +186,7 @@ const Login = () => {
                         </button>
                     </div>
 
-                </div>
+                </div> */}
 
 
             </div>
