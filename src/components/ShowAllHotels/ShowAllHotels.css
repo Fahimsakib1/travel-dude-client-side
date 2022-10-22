@@ -13,3 +13,12 @@
     transform: scale(1.07);
     transition: transform 2s ease-in-out;
 }
+
+
+
+@media only screen and (max-width: 577px) {
+    .card-img-top{
+        height: 55vw !important;
+        object-fit: cover;
+    }
+}
