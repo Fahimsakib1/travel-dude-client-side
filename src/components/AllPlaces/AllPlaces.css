@@ -1,0 +1,35 @@
+.custom-bg-image{
+    height: 350px;
+    position: relative;
+    border-radius: 10px;
+    border: 3px solid goldenrod;
+}
+/* .place-name{
+    position: absolute;
+    top: 150px;
+    font-size: 30px;
+} */
+
+/* .each-card-div{
+    background-color: black;
+    border-radius: 5px;
+    border: 2px solid blue;
+    padding-right: 10px;
+} */
+
+.title-div{
+    background-color: black;
+    color: goldenrod;
+    text-decoration: none;
+}
+
+.title-div:hover .place-name{
+    color: blue;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 990px){
+    .each-place-card-div{
+        margin-left: 100px;
+        width: 400px;
+    }
+} 

@@ -1,0 +1,153 @@
+.booking-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../images/booking-bg.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.description {
+    font-size: 18px;
+}
+
+
+/* .main-form{
+    background-color: white;
+    padding: 25px 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px gray;
+    margin-left: 20px;
+    margin-right: 20px;
+} */
+
+.booking-form-parent-div{
+    box-shadow: none !important;
+}
+
+
+.input-field {
+    background-color: rgb(234, 228, 228) !important;
+}
+
+.booking-button {
+    background-color: goldenrod;
+    color: rgb(19, 19, 19);
+    border: none;
+}
+
+.booking-button:hover {
+    background-color: rgb(49, 69, 243);
+    color: rgb(253, 250, 250);
+    border: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* .main-form{
+        width: 400px;
+    } */
+    .booking-container {
+        height: 1200px;
+    }
+}
+
+
+@media only screen and (min-width: 999px) {
+
+    .booking-container {
+        height: 850px;
+    }
+
+    .booking-form-parent-div {
+        height: 450px;
+    }
+}
+
+@media only screen and (min-width: 778px) and (max-width: 998px) {
+
+    .booking-container {
+        height: 1320px;
+    }
+}
+
+@media only screen and (min-width: 430px) and (max-width: 777px) {
+
+    .booking-container {
+        height: 1520px;
+    }
+}
+
+@media only screen and (max-width: 429px) {
+
+    .booking-container {
+        height: 1720px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Registration form related css */
+
+.booking-form-parent-div {
+
+    /* border-radius: 20px;
+    padding-bottom: 30px;
+    background-image: linear-gradient(to right,  rgb(38, 33, 33), rgb(40, 8, 104));
+    color: white;
+    position: relative; */
+
+    background-color: white;
+    padding: 25px 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px gray;
+}
+
+
+@media only screen and (max-width: 530px) {
+
+    .registration-form-container,
+    .registration-form-container {
+        width: 90% !important;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .registration-form-container {
+        width: 100% !important;
+        padding-left: 2px !important;
+        padding-right: 2px !important;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width:530px) {
+    .registration-form-container {
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}

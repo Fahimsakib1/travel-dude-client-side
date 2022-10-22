@@ -1,0 +1,6 @@
+.update-profile-container{
+    background-image: linear-gradient(to right,  rgb(121, 35, 35), rgb(29, 4, 79));
+    color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
