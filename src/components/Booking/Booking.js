@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import './Booking.css';
 import Button from 'react-bootstrap/Button';
@@ -15,14 +15,19 @@ import pic1 from '../../images/CoxsBazar/Coxs1.png';
 import pic2 from '../../images/CoxsBazar/Cox2.png';
 import pic3 from '../../images/CoxsBazar/Coxs3.png';
 import Hotels from '../Hotels/Hotels';
+import { AuthContext } from '../Contexts/AuthProvider/AuthProvider';
+import PlaceMap from '../PlaceMap/PlaceMap';
 
 
 
 const Booking = () => {
     const selectedPlace = useLoaderData();
     console.log(selectedPlace);
-    const { name, description, image1,image2, image3, image4, image5, id, map_link } = selectedPlace;
-    console.log(name, image1, image2, image3, image4, image5, map_link)
+    const { name, description, image1, image2, image3, image4, image5, id, map_link } = selectedPlace;
+    console.log(name, image1, image2, image3, image4, image5, map_link);
+
+    const { user } = useContext(AuthContext);
+    console.log("User From Booking Page", user)
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -33,6 +38,7 @@ const Booking = () => {
     const [journeyDate, setJourneyDate] = useState('');
     const [returnDate, setReturnDate] = useState('');
 
+    
     const handleSubmit = (event) => {
         event.preventDefault();
         const city = event.target.cityName.value;
@@ -44,13 +50,33 @@ const Booking = () => {
         setJourneyDate(date1);
         setReturnDate(date2);
 
-        console.log(cityName,journeyDate, returnDate )
+        console.log(city, date1, date2);
+        console.log("Fahiim")
 
-        Swal.fire(
-            'Great',
-            `${cityName} ${journeyDate} and ${returnDate} are booked`,
-            'success'
-        )
+        if (user) {
+            Swal.fire(
+                'Great',
+                `From: ${city} 
+                To : ${name}   
+                Journey Date: ${date1}  
+                Return Date: ${date2} are booked For You`,
+                'success'
+            )
+
+            navigate(`/hotels/${id}`)
+        }
+
+
+        else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'You need to Login First for Booking'
+            })
+            navigate('/login');
+
+        }
+
 
     }
 
@@ -143,7 +169,7 @@ const Booking = () => {
 
                         <div>
                             <h1 style={{ color: "goldenrod" }}>{name}</h1>
-                            <p style={{textAlign:"justify"}} className='text-white description'>{description}</p>
+                            <p style={{ textAlign: "justify" }} className='text-white description'>{description}</p>
                         </div>
                     </div>
 
@@ -163,7 +189,7 @@ const Booking = () => {
 
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Destination</Form.Label>
-                                    <Form.Control className='input-field py-2 text-muted fs-5 fw-bold' type="text" placeholder="Enter Email" name="destination" defaultValue={name} readOnly />
+                                    <Form.Control className='input-field py-2 text-muted fs-5 fw-bold' type="text" placeholder="Enter Destination" name="destination" defaultValue={name} readOnly />
                                 </Form.Group>
 
                                 <div className='d-flex justify-content-between flex-md-row flex-column'>
@@ -179,17 +205,21 @@ const Booking = () => {
 
                                 </div>
 
+
+
                                 <div className='text-center'>
-                                    <Link to={`/hotels/${id}`}>
+                                    <>
                                         <button className='booking-button px-4 py-2 w-75 my-3 fw-semibold fs-6 rounded-3'>
                                             Start Booking
                                         </button>
-                                    </Link>
+                                    </>
                                 </div>
+
 
                             </Form>
 
                         </div>
+
                     </div>
 
                 </div>

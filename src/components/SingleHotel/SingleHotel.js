@@ -11,7 +11,7 @@ const SingleHotel = ({ hotel }) => {
 
     return (
         <div>
-            <div className="card mb-3">
+            <div className="card mb-3 hotel-card">
                 <div className="row g-0">
                     <div className="col-md-4">
                         <img src={image_url} className="img-fluid rounded-start hotel-image card-img-top" alt="..." />

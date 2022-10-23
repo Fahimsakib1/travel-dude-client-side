@@ -5,14 +5,14 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link, NavLink } from 'react-router-dom';
 import { Container, Image } from 'react-bootstrap';
 import Swal from 'sweetalert2';
-import logo from '../../images/icons/logo.png';
-import logo1 from '../../images/icons/title-logo.png';
 import { AuthContext } from '../Contexts/AuthProvider/AuthProvider';
 import { FaUserAlt } from 'react-icons/fa';
 import TDLogo1 from '../../images/icons/TDLogo.PNG';
 import TDLogo2 from '../../images/icons/TDLogo-No-Bg.png';
 import TD1 from '../../images/icons/TD1.PNG';
 import TD2 from '../../images/icons/TD1-No-Bg.png';
+
+
 
 const Header = () => {
 
@@ -44,7 +44,7 @@ const Header = () => {
     
     
     return (
-        <Navbar collapseOnSelect expand="lg" className='pb-3 navbar-container' variant="dark">
+        <Navbar collapseOnSelect expand="lg" className='pb-3 navbar-container' variant="dark" >
             <Container className='d-flex flex-md-column flex-lg-row flex-xl-row navbar-inner'>
 
                 <div className='d-flex justify-content-center align-items-center mt-1'>
@@ -81,15 +81,15 @@ const Header = () => {
                             {
                                 user?.uid ?
                                     <div className='d-flex align-items-center'>
-                                        <p className='me-1 my-auto' style={{ color: "goldenrod" }}>Welcome, {user?.displayName}
+                                        <p className='me-1 mt-1 fs-6' style={{ color: "goldenrod" }}>Welcome, {user?.displayName}
                                         </p>
                                         <Link to='/profile'>
                                             {
                                                 user?.photoURL ?
-                                                    <Image roundedCircle src={user?.photoURL} style={{ height: "40px" }} >
+                                                    <Image className='' roundedCircle src={user?.photoURL} style={{ height: "40px" }} >
                                                     </Image>
                                                     :
-                                                    <FaUserAlt className='fs-3 rounded-4'></FaUserAlt>
+                                                    <FaUserAlt className='fs-3 rounded-4 mt-1'></FaUserAlt>
                                             }
                                         </Link>
 
@@ -100,7 +100,7 @@ const Header = () => {
                                     <>
                                         <Link className='me-2' to='/login'>Login</Link>
                                         <Link to='/register' className='me-2 mb-2'>Register</Link>
-                                        <Link to='/profile'><FaUserAlt className='fs-3 rounded-4 ms-2 text-white'></FaUserAlt></Link>
+                                        <Link to='/profile'><FaUserAlt className='fs-3 rounded-4 ms-2 text-white mt-1'></FaUserAlt></Link>
                                     </>
                             }
                         </>

@@ -4,6 +4,13 @@
     height: 15vw;
     object-fit: cover;
 }
+.hotel-card:hover{
+    transform: scale(1.07);
+    transition: transform 2s ease-in-out;
+    border: 1px solid rgb(41, 13, 200);
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px white;
+}
 
 @media only screen and (max-width: 700px) {
     .card-img-top{
