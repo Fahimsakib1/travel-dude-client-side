@@ -19,3 +19,8 @@
 .footer-parent-div{
     margin-top: 300px;
 }
+
+.facebook-icon:hover, .instagram-icon:hover, .linkedin-icon:hover, .github-icon:hover{
+    transform: scale(1.4);
+    transition: transform 2s ease-in-out;
+}

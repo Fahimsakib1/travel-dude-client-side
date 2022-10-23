@@ -30,13 +30,13 @@ const Footer = () => {
                     <section className="mb-4 ">
 
                         {/* <!-- Facebook --> */}
-                        <Link className='m-1 px-3' title="Facebook" target="_blank" to="https://www.facebook.com/moebdgov" role="button"><FaFacebook className='fs-4 facebook-icon'></FaFacebook></Link>
+                        <Link className='m-1 px-3 facebook-icon' title="Facebook" target="_blank" to="https://www.facebook.com/moebdgov" role="button"><FaFacebook className='fs-4 facebook-icon'></FaFacebook></Link>
 
-                        <Link className='instagram-icon m-1 px-3' title="Instagram" target="_blank" to="https://www.facebook.com/moebdgov" role="button"><FaInstagram className='text-danger fs-4 '></FaInstagram></Link>
+                        <Link className='instagram-icon m-1 px-3' title="Instagram" target="_blank" to="https://www.facebook.com/moebdgov" role="button"><FaInstagram className='text-danger fs-4 instagram-icon'></FaInstagram></Link>
 
-                        <Link className='m-1 px-3' title="LinkedIn" target="_blank" to="https://www.facebook.com/moebdgov" role="button"><FaLinkedin className='text-primary fs-4 linkedin-icon'></FaLinkedin></Link>
+                        <Link className='m-1 px-3 linkedin-icon' title="LinkedIn" target="_blank" to="https://www.facebook.com/moebdgov" role="button"><FaLinkedin className='text-primary fs-4 linkedin-icon'></FaLinkedin></Link>
 
-                        <Link className='m-1 px-3' title="GitHub" target="_blank" to="https://www.facebook.com/moebdgov" role="button"><FaGithub className='text-white fs-4 github-icon'></FaGithub></Link>
+                        <Link className='m-1 px-3 github-icon' title="GitHub" target="_blank" to="https://www.facebook.com/moebdgov" role="button"><FaGithub className='text-white fs-4 github-icon'></FaGithub></Link>
 
                     </section>
 
