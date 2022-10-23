@@ -4,11 +4,12 @@ import SingleHotel from '../SingleHotel/SingleHotel';
 import pic from '../../images/Jungle/J3.jpg';
 import './Hotels.css'
 
-const Hotels = () => {
+const Hotels = ({props}) => {
     const hotels = useLoaderData();
     console.log(hotels);
     const { id, details, cancel, image_url, price, rating, title, total_view, total_vote, place_name } = hotels
 
+    
     return (
         <div className='bg-hotels-div mb-5'>
 

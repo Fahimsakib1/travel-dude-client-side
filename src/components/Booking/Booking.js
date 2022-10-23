@@ -21,8 +21,8 @@ import Hotels from '../Hotels/Hotels';
 const Booking = () => {
     const selectedPlace = useLoaderData();
     console.log(selectedPlace);
-    const { name, description, image, id } = selectedPlace;
-
+    const { name, description, image, id, map_link } = selectedPlace;
+    console.log(name, image, map_link)
 
     const navigate = useNavigate();
     const location = useLocation();
