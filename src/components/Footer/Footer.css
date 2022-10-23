@@ -1,0 +1,21 @@
+/* Footer Customized CSS  */
+.footer-section{
+    margin-top: -300px;
+}
+.footer-terms-and-condition{
+    text-decoration: none;
+    color: white;
+}
+.footer-email, .forter-mobile{
+    margin-top: -14px;
+}
+.last-div{
+    background-color: rgba(0, 0, 0, 0.2)
+}
+.my-name{
+    text-decoration: none; 
+    font-size: 18px;
+}
+.footer-parent-div{
+    margin-top: 300px;
+}
