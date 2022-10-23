@@ -6,9 +6,13 @@ import { Link, NavLink } from 'react-router-dom';
 import { Container, Image } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 import logo from '../../images/icons/logo.png';
-import logo1 from '../../images/icons/title-logo.png'
+import logo1 from '../../images/icons/title-logo.png';
 import { AuthContext } from '../Contexts/AuthProvider/AuthProvider';
 import { FaUserAlt } from 'react-icons/fa';
+import TDLogo1 from '../../images/icons/TDLogo.PNG';
+import TDLogo2 from '../../images/icons/TDLogo-No-Bg.png';
+import TD1 from '../../images/icons/TD1.PNG';
+import TD2 from '../../images/icons/TD1-No-Bg.png';
 
 const Header = () => {
 
@@ -40,11 +44,11 @@ const Header = () => {
     
     
     return (
-        <Navbar collapseOnSelect expand="lg" className='pb-4 navbar-container shadow-5-strong'>
+        <Navbar collapseOnSelect expand="lg" className='pb-3 navbar-container' variant="dark">
             <Container className='d-flex flex-md-column flex-lg-row flex-xl-row navbar-inner'>
 
-                <div className='d-flex justify-content-center align-items-center mt-2'>
-                    <Navbar.Brand href="#home"><img className='img-fluid header-image' src={logo} alt="" /></Navbar.Brand>
+                <div className='d-flex justify-content-center align-items-center mt-1'>
+                    <Navbar.Brand href="#home"><img className='img-fluid header-image' src={TD2} alt="" /></Navbar.Brand>
                     <Link className='header-title' to="/"><span className='website-title'>Travel Dude<span style={{ fontSize: "20px" }}>.com</span></span></Link>
                 </div>
 

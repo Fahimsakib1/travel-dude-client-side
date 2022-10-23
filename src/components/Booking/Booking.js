@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import './Booking.css';
 import Button from 'react-bootstrap/Button';
@@ -21,23 +21,34 @@ import Hotels from '../Hotels/Hotels';
 const Booking = () => {
     const selectedPlace = useLoaderData();
     console.log(selectedPlace);
-    const { name, description, image, id, map_link } = selectedPlace;
-    console.log(name, image, map_link)
+    const { name, description, image1,image2, image3, image4, image5, id, map_link } = selectedPlace;
+    console.log(name, image1, image2, image3, image4, image5, map_link)
 
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
+
+
+    const [cityName, setCityName] = useState('');
+    const [journeyDate, setJourneyDate] = useState('');
+    const [returnDate, setReturnDate] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
         const city = event.target.cityName.value;
         const date1 = event.target.fromDate.value;
         const date2 = event.target.toDate.value;
-        console.log(date1, date2)
+        console.log(date1, date2);
+
+        setCityName(city);
+        setJourneyDate(date1);
+        setReturnDate(date2);
+
+        console.log(cityName,journeyDate, returnDate )
 
         Swal.fire(
             'Great',
-            `${city} ${date1} and ${date2} are booked`,
+            `${cityName} ${journeyDate} and ${returnDate} are booked`,
             'success'
         )
 
@@ -82,7 +93,7 @@ const Booking = () => {
 
             <div className=''>
                 <div className='home-parent-div row row-cols-1 row-cols-lg-2  px-5 container g-col-4 mx-auto mb-5'>
-                    <div className=' mt-5 '>
+                    <div className=' mt-5'>
 
                         <div className='mb-4'>
                             <Carousel >
@@ -90,7 +101,7 @@ const Booking = () => {
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src={pic1}
+                                        src={image1}
                                         alt="First slide"
                                     />
                                 </Carousel.Item>
@@ -98,7 +109,7 @@ const Booking = () => {
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src={pic2}
+                                        src={image2}
                                         alt="Second slide"
                                     />
                                 </Carousel.Item>
@@ -106,7 +117,23 @@ const Booking = () => {
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src={pic3}
+                                        src={image3}
+                                        alt="Third slide"
+                                    />
+                                </Carousel.Item>
+
+                                <Carousel.Item>
+                                    <img
+                                        className="d-block w-100"
+                                        src={image4}
+                                        alt="Third slide"
+                                    />
+                                </Carousel.Item>
+
+                                <Carousel.Item>
+                                    <img
+                                        className="d-block w-100"
+                                        src={image5}
                                         alt="Third slide"
                                     />
                                 </Carousel.Item>
@@ -116,7 +143,7 @@ const Booking = () => {
 
                         <div>
                             <h1 style={{ color: "goldenrod" }}>{name}</h1>
-                            <p className='text-white description'>{description}</p>
+                            <p style={{textAlign:"justify"}} className='text-white description'>{description}</p>
                         </div>
                     </div>
 

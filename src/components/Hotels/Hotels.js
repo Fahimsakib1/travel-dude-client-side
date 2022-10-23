@@ -26,7 +26,7 @@ const Hotels = ({props}) => {
 
                 <div className=' col-lg-5 col-md-12 col-sm-12'>
                     <div className='text-center'>
-                        <iframe className='map' width="498" height="580" id="gmap_canvas" src="https://maps.google.com/maps?q=Cox,s%20bazar&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <iframe className='map' width="498" height="580" id="gmap_canvas" src="https://maps.google.com/maps?q=Cox,s%20bazar&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
                     </div>
                 </div>
             </div>
