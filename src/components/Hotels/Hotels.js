@@ -8,7 +8,7 @@ import PlaceMap from '../PlaceMap/PlaceMap';
 const Hotels = ({props}) => {
     const hotels = useLoaderData();
     console.log(hotels);
-    const { id, details, cancel, image_url, price, rating, title, total_view, total_vote, place_name } = hotels;
+    // const { id, details, cancel, image_url, price, rating, title, total_view, total_vote, place_name } = hotels;
 
     const [place, setPlace] = useState({});
     const {place_id} = hotels[0];
@@ -21,6 +21,7 @@ const Hotels = ({props}) => {
         .then(data => setPlace(data))
     },[])
     
+    console.log("Place data from Hotels", place);
     const{map_link, name} = place;
     
     return (

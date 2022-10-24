@@ -7,6 +7,119 @@
   pointer-events: none;
 }
 
+/* .main-bg-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url('./images/Jungle/J2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 100px;
+} */
+
+
+
+
+
+.main-div {
+  position: absolute;
+  left: 0;
+  top: 10;
+  width: 100%;
+  animation: animate 30s ease-in-out infinite;
+  background-size: cover;
+}
+
+
+@keyframes animate {
+  0% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)), url('./images/CoxsBazar/Cox2.png');
+  }
+
+  10% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url('./images/CoxsBazar/Coxs1.png');
+  }
+
+  20% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url('./images/CoxsBazar/Coxs3.png');
+  }
+
+  30% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url('./images/Jungle/J1.jpg');
+  }
+
+  40% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url('./images/Jungle/J2.jpg');
+  }
+
+  50% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url('./images/Sreemangal/Sre1.jpg');
+  }
+
+  70% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url('./images/Sreemangal/Sre2.jpg');
+  }
+
+  80% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url('./images/Jungle/J1.jpg');
+  }
+
+  90% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url('./images/Shun1.jpg');
+  }
+
+  100% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url('./images/Shun2.jpg');
+  }
+}
+
+
+@media only screen and (min-width: 401px) and (max-width: 578px) {
+  .main-div {
+    height: 2450px;
+  }
+}
+
+@media only screen and (min-width: 830px) and (max-width: 999px) {
+  .main-div {
+    height: 950px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .main-div {
+    height: 2450px;
+  }
+}
+
+@media only screen and (min-width: 579px) and (max-width: 990px) {
+  .main-div {
+    height: 2350px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main-div {
+    height: 1430px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -34,6 +147,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
